@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap');
+
 body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .container {
@@ -24,6 +28,8 @@ body {
     height: 85vh;
     transform: rotate(-7.5deg);
     z-index: 100;
+    position: relative;
+    bottom: -50px;
 }
 
 .right-section {
@@ -36,4 +42,40 @@ body {
     bottom: 0;
     height: 100%;
     width: 65%;
+}
+
+.header {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 35px;
+    margin-left: 217px;
+}
+
+.form {
+    margin-left: 217px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.social-login {
+    margin-left: 217px;
+}
+
+.or-section {
+    margin-left: 417px;
+}
+
+.login {
+    margin-left: 217px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #868686;
+    width: 450px;
+    font-size: 14px;
+    padding: 5px;
 }
