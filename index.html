@@ -15,17 +15,32 @@
         <div class="right-section">
             <div class="header">Create Account</div>
             <div class="social-login">
-                <div class="google">Sign up with Google</div>
-                <div class="facebook">Sign up with Facebook</div>
+                <div class="google"><img src="./assets/google.svg" />Sign up with Google</div>
+                <div class="facebook"><img src="./assets/facebook.svg" />Sign up with Facebook</div>
             </div>
             <div class="or-section">-OR-</div>
             <div class="form">
-                <input type="text" placeholder="Full Name">
-                <input type="email" name="email" id="mail" placeholder="Email">
-                <input type="password" name="pass" id="passkey">
+                <input type="text" placeholder="Full Name" id="name-inp" onblur="validateName()" >
+                    <div id="name-warn" class="warn">Please enter the name</div>
+                <input type="email" name="email" id="mail" id="email-inp" onblur="validaMail()" placeholder="Email">
+                    <div id="email-warn" class="warn">Please enter the name</div>
+                <div class="radio-section">
+                    <label>
+                        <input type="radio" name="gender" id="" value="male">
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" id="">
+                        Female
+                    </label>
+                </div>
+                <input type="password" name="pass" id="passkey" placeholder="Password">
+                    <div id="email-warn" class="warn">Please enter the name</div>
+                <input type="submit" value="Create Account">
             </div>
             <div class="login">Already have an account? Log In</div>
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
