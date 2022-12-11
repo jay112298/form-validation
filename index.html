@@ -9,8 +9,9 @@
 </head>
 <body>
     <div class="container">
-        <img src="./assets/background.png" alt="">
-        <!-- <div class="left-section"> -->
+        <div class="left-section">
+            <p class="name-usn" ><img src="./assets/object.svg" /><br>Designed by <br>Jitendra Asole, ME21D031</p>
+            <img src="./assets/background.png" alt="Illustration">
         </div>
         <div class="right-section">
             <div class="header">Create Account</div>
@@ -22,7 +23,7 @@
             <div class="form">
                 <input type="text" placeholder="Full Name" id="name-inp" onblur="validateName()" >
                     <div id="name-warn" class="warn">Please enter the name</div>
-                <input type="email" name="email" id="mail" id="email-inp" onblur="validaMail()" placeholder="Email">
+                <input type="email" name="email" id="email-inp" id="email-inp" onblur="validateMail()" placeholder="Email">
                     <div id="email-warn" class="warn">Please enter the name</div>
                 <div class="radio-section">
                     <label>

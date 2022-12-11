@@ -20,8 +20,24 @@ body {
     width: 35%;
     z-index: 100;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.left-section > img {
+    margin-left: 100px;
+    height: 500px;
+}
+
+.name-usn {
+    color: #fff;
+    font-size: 24px;
+    line-height: 35px;
+    font-style: normal;
+    letter-spacing: 0.08em;
+    font-weight: 400;
+    width: 364px;
 }
 
 .container > img {
@@ -49,7 +65,7 @@ body {
     font-size: 24px;
     line-height: 35px;
     margin-left: 217px;
-    margin-top: 109px;
+    margin-top: 50px;
     margin-bottom: 45px;
 }
 
@@ -145,6 +161,11 @@ input {
     padding: 5px;
     letter-spacing: 0.08em;
     color: #868686;
+}
+
+.input-red {
+    border-bottom: 1px solid red;
+    border-radius: 5px;
 }
 
 input:focus {
