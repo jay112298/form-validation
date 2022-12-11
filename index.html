@@ -22,10 +22,10 @@
             <div class="or-section">-OR-</div>
             <div class="form">
                 <input type="text" placeholder="Full Name" id="name-inp" onblur="validateName()" >
-                    <div id="name-warn" class="warn">Please enter the name</div>
+                    <div id="name-warn" class="warn"></div>
                 <input type="email" name="email" id="email-inp" id="email-inp" onblur="validateMail()" placeholder="Email">
-                    <div id="email-warn" class="warn">Please enter the name</div>
-                <div class="radio-section">
+                    <div id="email-warn" class="warn"></div>
+                <div class="radio-section" onmouseleave="validateGender()" onblur="validateGender()">
                     <label>
                         <input type="radio" name="gender" id="" value="male">
                         Male
@@ -35,9 +35,10 @@
                         Female
                     </label>
                 </div>
-                <input type="password" name="pass" id="passkey" placeholder="Password">
-                    <div id="email-warn" class="warn">Please enter the name</div>
-                <input type="submit" value="Create Account">
+                    <div id="gender-warn" class="warn"></div>
+                <input type="password" id="pass-inp" placeholder="Password" onblur="validatePass()">
+                    <div id="pass-warn" class="warn"></div>
+                <button id="form-submit" onclick="submitForm()" >Create Account</button>
             </div>
             <div class="login">Already have an account? Log In</div>
         </div>

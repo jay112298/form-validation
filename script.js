@@ -23,60 +23,80 @@ function validateMail() {
     var emailValue = emailField.value
     var emailWarn = document.getElementById('email-warn')
 
+    if(emailValue.includes('@')){
+        console.log('Email contains @');
+    }
+
     if (emailValue === undefined || emailValue == "") {
         emailField.classList.add('input-red')
         emailWarn.style.display = "block"
         emailWarn.innerHTML = "Please enter your email"
 
-    } else if (emailValue.includes("@")) {
+    } else if (!emailValue.includes("@")) {
         emailField.classList.add('input-red')
         emailWarn.style.display = "block"
         emailWarn.innerHTML = "Email should be valid"
     }
      else {
-        nameField.classList.remove('input-red')
+        emailField.classList.remove('input-red')
         emailWarn.style.display = "none"
     }
 }
 
 function validateGender() {
-    var genderField = document.getElementById('gender-inp');
-    var genderValue = genderField.value
+    var genderField = document.getElementsByName('gender');
     var genderWarn = document.getElementById('gender-warn')
 
-    if (genderValue === undefined || genderValue == "") {
-        genderField.classList.add('input-red')
+    if (genderField[0].checked == false && genderField[1].checked == false) {
         genderWarn.style.display = "block"
-        genderWarn.innerHTML = "Please enter your email"
-
-    } else if (genderValue.includes("@")) {
-        genderField.classList.add('input-red')
-        genderWarn.style.display = "block"
-        genderWarn.innerHTML = "Email should be valid"
-    }
+        genderWarn.innerHTML = "Please select your gender"
+        console.log("If triggered")
+    } //else if (false) {
+    //     genderField.classList.add('input-red')
+    //     genderWarn.style.display = "block"
+    //     genderWarn.innerHTML = "Email should be valid"
+    // }
      else {
-        nameField.classList.remove('input-red')
+        // nameField.classList.remove('input-red')
+        console.log("Else triggered")
         genderWarn.style.display = "none"
     }
 }
 
 function validatePass() {
     var passField = document.getElementById('pass-inp');
-    var passValue = emailField.value
+    var passValue = passField.value
     var passWarn = document.getElementById('pass-warn')
-
-    if (emailValue === undefined || emailValue == "") {
+    console.log(passValue)
+    let pattern = new RegExp("^(?=(.*[a-zA-Z]){1,})(?=(.*[0-9]){2,}).{8,}$");
+    
+    if (passValue === undefined || passValue == "") {
         passField.classList.add('input-red')
         passWarn.style.display = "block"
         passWarn.innerHTML = "Please enter your password"
 
-    } else if (emailValue.includes("@")) {
-        pass.classList.add('input-red')
-        pass.style.display = "block"
-        pass.innerHTML = "Password should be atleast 8 characters long"
+    } else if (passValue.length < 8) {
+        passField.classList.add('input-red')
+        passWarn.style.display = "block"
+        passWarn.innerHTML = "Password should be atleast 8 characters long"
+    } else if (!pattern.test(passValue)) {
+        passField.classList.add('input-red')
+        passWarn.style.display = "block"
+        passWarn.innerHTML = "Password should contain Uppercase lowercase letters, number and speacial characters"
     }
      else {
         passField.classList.remove('input-red')
         passWarn.style.display = "none"
     }
+}
+
+function submitForm() {
+    console.log("submitForm was clicked")
+    // event.preventDefault()
+    var submitButton = document.getElementById('form-submit')
+    submitButton.innerHTML = "<img height='30px' src='./assets/loading.jpg' />"
+    setTimeout(function() {
+        submitButton.innerHTML = "Form submitted"
+        
+    }, 2000)
 }

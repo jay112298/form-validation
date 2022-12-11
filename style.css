@@ -15,6 +15,15 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
+.dialog {
+    position: absolute;
+    top: 150px;
+    bottom: 150px;
+    left: 150px;
+    right: 150px;
+}
+
 .left-section {
     height: 100%;
     width: 35%;
@@ -172,7 +181,16 @@ input:focus {
     outline: none;
 }
 
-input[type="submit"] {
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 450px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    padding: 5px;
     background: #1899d6;
     border-radius: 7px;
     height: 34px;
