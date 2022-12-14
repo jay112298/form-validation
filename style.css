@@ -207,6 +207,15 @@ button {
     background-color: #00b894;
 }
 
+.log-in {
+    color: #56d6ff;
+}
+
+.log-in:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 @media (min-width: 1500px) {
    .left-section > img {
     height: 800px;
