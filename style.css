@@ -198,3 +198,40 @@ button {
     margin-bottom: 21px;
     color: #fff;
 }
+
+.bg-red {
+    background-color: #d63031;
+}
+
+.bg-green {
+    background-color: #00b894;
+}
+
+@media (min-width: 1500px) {
+   .left-section > img {
+    height: 800px;
+    margin-left: 150px;
+   }
+
+   .header {
+    margin-top: 200px;
+    margin-left: 317px;
+   }
+
+   .social-login {
+    margin-left: 317px;
+   }
+
+   .or-section {
+    margin-left: 517px;
+   }
+
+   .form {
+    margin-left: 317px;
+    gap: 25px;
+   }
+
+   .login {
+    margin-left: 317px;
+   }
+}
